@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -13,4 +14,12 @@ body {
   color: #ffffff;
   background: url("img/snowden.jpg") no-repeat #000000;
   background-size: cover;
+}
+
+a {
+  color: #9DED07;
+}
+
+a:hover {
+  text-decoration: line-through;
 }
