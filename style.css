@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 16px;
+  color: #ffffff;
+  background: url("img/snowden.jpg") no-repeat #000000;
+  background-size: cover;
+}
