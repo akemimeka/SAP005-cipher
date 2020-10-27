@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
+  border: 0;
 }
 
 body {
@@ -12,7 +13,9 @@ body {
   font-family: 'Share Tech Mono', monospace;
   font-size: 16px;
   color: #ffffff;
-  background: url("img/snowden.jpg") no-repeat #000000;
+  background-image: url("img/snowden.jpg");
+  background-color: #000000;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
