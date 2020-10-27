@@ -10,21 +10,37 @@
 <body class="bg-image">
   <div id="root">
     <header>
-      <h1>Operação Nevada</h1>
+      <h1 class="title">Operação Nevada</h1>
     </header>
 
     <main>
       <section>
-        <input type="text" placeholder="Insira aqui a mensagem que deseja criptografar ou decriptografar">
-        <input type="number" placeholder="Digite o número especial">
-        <button>Codificar</button>
-        <button>Decodificar</button>
-        <input type="text" placeholder="A mensagem irá aparecer aqui">
+        <form>
+          <fieldset>
+            <legend>Use o programa abaixo para encriptar ou decriptar mensagens</legend>
+
+            <label for="original-message">Insira aqui a mensagem original
+              <input id="original-message" type="text">
+            </label>
+
+            <label for="number">Digite o número especial
+              <input id="number" type="number">
+            </label>
+
+            <button class="encript-button">Codificar</button>
+            <button class="decript-button">Decodificar</button>
+
+            <label for="translated-message">
+              <div id="translated-message">A mensagem final irá aparecer aqui</div>
+            </label>
+          </fieldset>
+        </form>
       </section>
     </main>
 
-    <footer>
-      <p>Feito com 🤍 por <a href="http://github.com/akemimeka" target="_blank" rel="noopener noreferrer">Akemi Mitsueda</a> na <a href="http://laboratoria.la" target="_blank" rel="noopener noreferrer">Laboratoria</a></p>
+    <footer class="footer">
+      <p class="footer-text">Feito com 🤍 por <a href="http://github.com/akemimeka" target="_blank" rel="noopener noreferrer">Akemi
+          Mitsueda</a> na <a href="http://laboratoria.la" target="_blank" rel="noopener noreferrer">Laboratoria</a></p>
     </footer>
   </div>
   <script src="index.js" type="module"></script>
