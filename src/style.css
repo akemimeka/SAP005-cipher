@@ -13,7 +13,7 @@ body {
   font-family: 'Share Tech Mono', monospace;
   font-size: 16px;
   color: #ffffff;
-  background-image: url("img/snowden.jpg");
+  /* background-image: url("img/snowden.jpg"); */
   background-color: #000000;
   background-repeat: no-repeat;
   background-size: cover;
@@ -25,4 +25,30 @@ a {
 
 a:hover {
   text-decoration: line-through;
+}
+
+.container-1 {
+  margin: 3em 0;
+}
+
+input {
+  display: block;
+  padding: 0.5em;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1em;
+}
+
+button {
+  border: 1px solid #3b5a00;
+  background-color: #9DED07;
+  padding: 0.5em 1em;
+  font-family: 'Share Tech Mono', monospace;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+button:hover {
+  border: 1px solid #9DED07;
+  background-color: #000;
+  color: #9DED07;
 }
