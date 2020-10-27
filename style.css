@@ -17,6 +17,9 @@ body {
   background-color: #000000;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 a {
@@ -51,6 +54,18 @@ button:hover {
   border: 1px solid #9DED07;
   background-color: #000;
   color: #9DED07;
+}
+
+#root {
+  margin-left: 3em;
+}
+
+#translated-message {
+  width: 450px;
+  height: 100px;
+  background-color: #fff;
+  padding: 0.5em;
+  color: #000;
 }
 
 .footer {
