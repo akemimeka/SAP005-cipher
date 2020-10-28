@@ -7,5 +7,8 @@ const decryptButton = document.getElementById('decrypt-button');
 
 encryptButton.addEventListener('click', event => {
   event.preventDefault();
+  const getOriginalMessage = originalMessage.value;
+  const getOffsetNumber = offsetNumber.value;
+
   cipher.encode();
 });
