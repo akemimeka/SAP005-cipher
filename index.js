@@ -1,14 +1,14 @@
 import cipher from './cipher.js';
 
-const originalMessage = document.getElementById('original-message');
-const offsetNumber = document.getElementById('offset-number');
+const getOriginalMessage = document.getElementById('original-message');
+const getOffsetNumber = document.getElementById('offset-number');
 const encryptButton = document.getElementById('encrypt-button');
 const decryptButton = document.getElementById('decrypt-button');
 
 encryptButton.addEventListener('click', event => {
   event.preventDefault();
-  const getOriginalMessage = originalMessage.value;
-  const getOffsetNumber = offsetNumber.value;
+  const originalMessage = getOriginalMessage.value;
+  const offsetNumber = Number(getOffsetNumber.value);
 
-  cipher.encode();
+  cipher.encode(originalMessage, offsetNumber);
 });
