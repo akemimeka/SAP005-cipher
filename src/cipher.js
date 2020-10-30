@@ -6,8 +6,9 @@ const cipher = {
 
   encode: (originalMessage, offsetNumber) => {
     let finalMessage = "";
+    const uppercaseOriginalMessage = String(originalMessage).toUpperCase();
 
-    for (const letter of originalMessage) {
+    for (const letter of uppercaseOriginalMessage) {
       const letterCharCode = letter.charCodeAt();
       const letterRealNumber = letterCharCode - 65;
       const alphabetLetters = 26;
@@ -17,9 +18,22 @@ const cipher = {
       finalMessage += encryptedLetter;
     }
       return finalMessage;
+  },
+
+  decode: (originalMessage, offsetNumber) => {
+    let finalMessage = "";
+
+    for (const letter of originalMessage) {
+      const letterCharCode = letter.charCodeAt();
+      const letterRealNumber = letterCharCode + 65;
+      const alphabetLetters = 26;
+      const newLetterCharCode = ((letterRealNumber - offsetNumber) % alphabetLetters) + 65;
+      const encryptedLetter = String.fromCharCode(newLetterCharCode);
+      
+      finalMessage += encryptedLetter;
+    }
+      return finalMessage;
   }
-
-
 };
 
 export default cipher;
