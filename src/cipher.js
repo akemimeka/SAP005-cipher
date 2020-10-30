@@ -16,7 +16,6 @@ const cipher = {
       
       finalMessage += encryptedLetter;
     }
-      console.log(finalMessage)
       return finalMessage;
   }
 
