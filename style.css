@@ -9,6 +9,7 @@
 }
 
 body {
+  overflow: hidden;
   height: 100vh;
   font-family: 'Share Tech Mono', monospace;
   font-size: 16px;
@@ -39,19 +40,20 @@ a:hover {
   margin-bottom: 0.5em;
 }
 
-input {
+input, textarea {
   display: block;
   padding: 0.5em;
   font-family: 'Share Tech Mono', monospace;
   font-size: 1em;
 }
 
-input#original-message {
+#original-message {
   width: 400px;
+  height: 70px;
 }
 
 #offset-number {
-  width: 80px;
+  width: 100px;
 }
 
 button {
@@ -78,8 +80,10 @@ button:hover {
 }
 
 #translated-message {
+  overflow-wrap: break-word;
+  overflow: auto;
   width: 500px;
-  height: 100px;
+  height: 70px;
   background-color: #fff;
   padding: 0.5em;
   color: #000;
