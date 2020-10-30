@@ -3,8 +3,7 @@
 // const originalAlphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'];
 
 const cipher = {
-
-  encode: (originalMessage, offsetNumber) => {
+  encode: function(offsetNumber, originalMessage) {
     let finalMessage = "";
     const uppercaseOriginalMessage = String(originalMessage).toUpperCase();
 
@@ -20,7 +19,7 @@ const cipher = {
       return finalMessage;
   },
 
-  decode: (originalMessage, offsetNumber) => {
+  decode: function(offsetNumber, originalMessage) {
     let finalMessage = "";
 
     for (const letter of originalMessage) {
