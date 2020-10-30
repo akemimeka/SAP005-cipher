@@ -11,7 +11,7 @@ encryptButton.addEventListener('click', event => {
   const originalMessage = getOriginalMessage.value;
   const offsetNumber = Number(getOffsetNumber.value);
 
-  const encryptedMessage = cipher.encode(originalMessage, offsetNumber);
+  const encryptedMessage = cipher.encode(offsetNumber, originalMessage);
   getTranslatedMessage.innerHTML = encryptedMessage;
 });
 
@@ -20,6 +20,6 @@ decryptButton.addEventListener('click', event => {
   const originalMessage = getOriginalMessage.value;
   const offsetNumber = Number(getOffsetNumber.value);
 
-  const decryptedMessage = cipher.decode(originalMessage, offsetNumber);
+  const decryptedMessage = cipher.decode(offsetNumber, originalMessage);
   getTranslatedMessage.innerHTML = decryptedMessage;
 });
