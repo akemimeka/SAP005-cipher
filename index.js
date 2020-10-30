@@ -14,3 +14,12 @@ encryptButton.addEventListener('click', event => {
   const encryptedMessage = cipher.encode(originalMessage, offsetNumber);
   getTranslatedMessage.innerHTML = encryptedMessage;
 });
+
+decryptButton.addEventListener('click', event => {
+  event.preventDefault();
+  const originalMessage = getOriginalMessage.value;
+  const offsetNumber = Number(getOffsetNumber.value);
+
+  const decryptedMessage = cipher.decode(originalMessage, offsetNumber);
+  getTranslatedMessage.innerHTML = decryptedMessage;
+});
