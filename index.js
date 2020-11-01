@@ -1,3 +1,5 @@
+
+
 import cipher from './cipher.js';
 
 const getOriginalMessage = document.getElementById('original-message');
@@ -8,7 +10,7 @@ const decryptButton = document.getElementById('decrypt-button');
 
 encryptButton.addEventListener('click', event => {
   event.preventDefault();
-  const originalMessage = getOriginalMessage.value;
+  const originalMessage = String(getOriginalMessage.value).toUpperCase();
   const offsetNumber = Number(getOffsetNumber.value);
 
   const encryptedMessage = cipher.encode(offsetNumber, originalMessage);
@@ -17,7 +19,7 @@ encryptButton.addEventListener('click', event => {
 
 decryptButton.addEventListener('click', event => {
   event.preventDefault();
-  const originalMessage = getOriginalMessage.value;
+  const originalMessage = String(getOriginalMessage.value).toUpperCase();
   const offsetNumber = Number(getOffsetNumber.value);
 
   const decryptedMessage = cipher.decode(offsetNumber, originalMessage);
