@@ -1,5 +1,3 @@
-
-
 import cipher from './cipher.js';
 
 const getOriginalMessage = document.getElementById('original-message');
