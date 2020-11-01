@@ -1,8 +1,10 @@
 const cipher = {
   encode: function (offsetNumber, originalMessage) {
     let finalMessage = "";
+    const noOffsetNumber = !offsetNumber;
+    const noOriginalMessage = !originalMessage;
 
-    if (!offsetNumber || !originalMessage) {
+    if (noOffsetNumber || noOriginalMessage) {
       throw new TypeError();
     } else {
       for (const letter of originalMessage) {
