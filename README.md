@@ -4,10 +4,10 @@
 <br>
 
 ## Índice
-1. [Introdução](#📥-introdução)
-2. [Desenvolvimento](#👩💻-desenvolvimento)
-3. [Funcionamento](#⚙️-funcionamento)
-4. [Setup](#🧰-setup)
+1. [Introdução](#-introdução)
+2. [Desenvolvimento](#-desenvolvimento)
+3. [Funcionamento](#-funcionamento)
+4. [Setup](#-setup)
 
 ---
 
