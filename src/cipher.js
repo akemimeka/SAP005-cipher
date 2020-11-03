@@ -5,7 +5,7 @@ const cipher = {
     const noOriginalMessage = !originalMessage;
 
     if (noOffsetNumber || noOriginalMessage) {
-      throw new TypeError();
+      throw new TypeError('User did not insert original message, offset number or both.', 'cipher.js', 8);
     } else {
       for (const letter of originalMessage) {
         const letterCharCode = letter.charCodeAt();
@@ -24,7 +24,7 @@ const cipher = {
     let finalMessage = "";
 
     if (!offsetNumber || !originalMessage) {
-      throw new TypeError();
+      throw new TypeError('User did not insert original message, offset number or both.', 'cipher.js', 8);
     } else {
       for (const letter of originalMessage) {
         const letterCharCode = letter.charCodeAt();
