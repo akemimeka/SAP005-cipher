@@ -1,39 +1,99 @@
 const cipher = {
   encode: function (offsetNumber, originalMessage) {
-    let finalMessage = "";
     const noOffsetNumber = !offsetNumber;
     const noOriginalMessage = !originalMessage;
+    const negativeOffsetNumber = offsetNumber < 0;
+    const uppercaseACharCode = 65;
+    const uppercaseZCharCode = 90;
+    const lowercaseACharCode = 97;
+    const lowercaseZCharCode = 122;
+    const alphabetLetters = 26;
+    let finalMessage = "";
 
     if (noOffsetNumber || noOriginalMessage) {
-      throw new TypeError('User did not insert original message, offset number or both.', 'cipher.js', 8);
+      throw new TypeError("User didn't insert original message, offset number or both.", "cipher.js", 8);
     } else {
-      for (const letter of originalMessage) {
-        const letterCharCode = letter.charCodeAt();
-        const letterRealNumber = letterCharCode - 65;
-        const alphabetLetters = 26;
-        const newLetterCharCode = ((letterRealNumber + offsetNumber) % alphabetLetters) + 65;
-        const encryptedLetter = String.fromCharCode(newLetterCharCode);
+      for (const character of originalMessage) {
+        const characterCharCode = character.charCodeAt();
 
-        finalMessage += encryptedLetter;
+        const characterIsUppercase = (characterCharCode >= uppercaseACharCode) && (characterCharCode <= uppercaseZCharCode)
+        const characterIsLowercase = (characterCharCode >= lowercaseACharCode) && (characterCharCode <= lowercaseZCharCode)
+
+        if (negativeOffsetNumber) {
+          if (characterIsUppercase) {
+            const uppercaseCharCode = ((characterCharCode - uppercaseZCharCode + offsetNumber) % alphabetLetters) + uppercaseZCharCode;
+            const encryptedUppercase = String.fromCharCode(uppercaseCharCode);
+            finalMessage += encryptedUppercase;
+          } else if (characterIsLowercase) {
+            const lowercaseCharCode = ((characterCharCode - lowercaseZCharCode + offsetNumber) % alphabetLetters) + lowercaseZCharCode;
+            const encryptedLowercase = String.fromCharCode(lowercaseCharCode);
+            finalMessage += encryptedLowercase;
+          } else {
+            finalMessage += character;
+          }
+        } else {
+          if (characterIsUppercase) {
+            const uppercaseCharCode = ((characterCharCode - uppercaseACharCode + offsetNumber) % alphabetLetters) + uppercaseACharCode;
+            const encryptedUppercase = String.fromCharCode(uppercaseCharCode);
+            finalMessage += encryptedUppercase;
+          } else if (characterIsLowercase) {
+            const lowercaseCharCode = ((characterCharCode - lowercaseACharCode + offsetNumber) % alphabetLetters) + lowercaseACharCode;
+            const encryptedLowercase = String.fromCharCode(lowercaseCharCode);
+            finalMessage += encryptedLowercase;
+          } else {
+            finalMessage += character;
+          }
+        }
       }
-      return finalMessage;
     }
+    return finalMessage;
   },
 
   decode: function (offsetNumber, originalMessage) {
+    const noOriginalMessage = !originalMessage;
+    const noOffsetNumber = !offsetNumber;
+    const negativeOffsetNumber = offsetNumber < 0;
+    const uppercaseACharCode = 65;
+    const uppercaseZCharCode = 90;
+    const lowercaseACharCode = 97;
+    const lowercaseZCharCode = 122;
+    const alphabetLetters = 26;
     let finalMessage = "";
 
-    if (!offsetNumber || !originalMessage) {
-      throw new TypeError('User did not insert original message, offset number or both.', 'cipher.js', 8);
+    if (noOffsetNumber || noOriginalMessage) {
+      throw new TypeError("User didn't insert original message, offset number or both.", "cipher.js", 66);
     } else {
-      for (const letter of originalMessage) {
-        const letterCharCode = letter.charCodeAt();
-        const letterRealNumber = letterCharCode + 65;
-        const alphabetLetters = 26;
-        const newLetterCharCode = ((letterRealNumber - offsetNumber) % alphabetLetters) + 65;
-        const encryptedLetter = String.fromCharCode(newLetterCharCode);
+      for (const character of originalMessage) {
+        const characterCharCode = character.charCodeAt();
 
-        finalMessage += encryptedLetter;
+        const characterIsUppercase = (characterCharCode >= uppercaseACharCode) && (characterCharCode <= uppercaseZCharCode)
+        const characterIsLowercase = (characterCharCode >= lowercaseACharCode) && (characterCharCode <= lowercaseZCharCode)
+
+        if (negativeOffsetNumber) {
+          if (characterIsUppercase) {
+            const uppercaseCharCode = ((characterCharCode - uppercaseACharCode - offsetNumber) % alphabetLetters) + uppercaseACharCode;
+            const encryptedUppercase = String.fromCharCode(uppercaseCharCode);
+            finalMessage += encryptedUppercase;
+          } else if (characterIsLowercase) {
+            const lowercaseCharCode = ((characterCharCode - lowercaseACharCode - offsetNumber) % alphabetLetters) + lowercaseACharCode;
+            const encryptedLowercase = String.fromCharCode(lowercaseCharCode);
+            finalMessage += encryptedLowercase;
+          } else {
+            finalMessage += character;
+          }
+        } else {
+          if (characterIsUppercase) {
+            const uppercaseCharCode = ((characterCharCode - uppercaseZCharCode - offsetNumber) % alphabetLetters) + uppercaseZCharCode;
+            const encryptedUppercase = String.fromCharCode(uppercaseCharCode);
+            finalMessage += encryptedUppercase;
+          } else if (characterIsLowercase) {
+            const lowercaseCharCode = ((characterCharCode - lowercaseZCharCode - offsetNumber) % alphabetLetters) + lowercaseZCharCode;
+            const encryptedLowercase = String.fromCharCode(lowercaseCharCode);
+            finalMessage += encryptedLowercase;
+          } else {
+            finalMessage += character;
+          }
+        }
       }
     }
     return finalMessage;
