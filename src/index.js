@@ -27,9 +27,7 @@ decryptButton.addEventListener("click", event => {
 
 copyButton.addEventListener("click", event => {
   event.preventDefault();
-  getTranslatedMessage.removeAttribute("disabled");
   getTranslatedMessage.select();
   document.execCommand("copy");
-  getTranslatedMessage.setAttribute("disabled", "");
   copyButton.innerHTML = "Copied";
 });
