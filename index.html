@@ -17,17 +17,17 @@
 
     <main>
       <section>
-        <form id="form">
+        <form>
           <fieldset>
             <div class="container-1">
               <label for="original-message">Input message
-                <textarea autofocus id="original-message" type="text"></textarea>
+                <textarea autofocus type="text" id="original-message" ></textarea>
               </label>
             </div>
 
             <div class="container-1">
               <label for="offset-number">Token
-                <input id="offset-number" type="number">
+                <input type="number" id="offset-number">
               </label>
             </div>
 
@@ -38,12 +38,13 @@
 
             <div class="container-1">
               <label for="translated-message">Output message
-                <textarea disabled id="translated-message"></textarea>
+                <textarea readonly type="text" id="translated-message" ></textarea>
               </label>
             </div>
 
             <div class="container-1">
               <button id="copy-button">Copy</button>
+              <button id="clear-button" type="reset">Clear</button>
             </div>
           </fieldset>
         </form>
