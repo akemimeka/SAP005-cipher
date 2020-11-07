@@ -48,9 +48,16 @@ input, textarea {
   font-size: 1em;
 }
 
-#original-message {
+#original-message,
+#translated-message {
+  overflow-wrap: break-word;
+  overflow: auto;
   width: 400px;
   height: 70px;
+  margin-top: 0.3em;
+  background-color: #fff;
+  padding: 0.5em;
+  color: #000;
 }
 
 #offset-number {
@@ -66,7 +73,8 @@ button {
   font-weight: bold;
 }
 
-#encrypt-button {
+#encrypt-button,
+#copy-button {
   margin-right: 1.5em;
 }
 
@@ -78,17 +86,6 @@ button:hover {
 
 #root {
   margin-left: 3em;
-}
-
-#translated-message {
-  overflow-wrap: break-word;
-  overflow: auto;
-  width: 500px;
-  height: 70px;
-  margin-top: 0.3em;
-  background-color: #fff;
-  padding: 0.5em;
-  color: #000;
 }
 
 .footer {
