@@ -7,7 +7,7 @@
 1. [Introdução](#-introdução)
 2. [Desenvolvimento](#-desenvolvimento)
 3. [Funcionamento](#-funcionamento)
-4. [Setup](#-setup)
+4. [Tecnologias](#-tecnologias)
 
 ---
 
@@ -24,7 +24,11 @@ Este é o primeiro projeto desenvolvido por mim no bootcamp de front-end da [Lab
 ### 👉 Planejamento
 Todo o planejamento foi realizado com o [Trello](https://trello.com/), utilizando o modelo de Kanban sugerido pelas mentoras do bootcamp.
 
+<div align="center">
+
 ![alt text](src/img/print-trello.png "Print do board do projeto no Trello")
+
+</div>
 
 ### 👉 Tema
 Inspirada pela história de vazamento de dados da NSA por [Edward Snowden](https://pt.wikipedia.org/wiki/Edward_Snowden), decidi que o tema do meu projeto seria para a troca de mensagens em código entre funcionários de governos e instituições governamentais corruptas e pessoas de fora dessas instituições, principalmente jornalistas.
@@ -45,37 +49,39 @@ A imagem de fundo utilizada na aplicação pronta é uma foto editada; a origina
 Como já descrito anteriormente, a *Operation Blizzard* (ou *Operação Nevasca*, em Português Brasileiro) tem como foco atender dois tipos de usuários:
 
 - Funcionários de governos que queiram compartilhar informações relevantes para a sociedade
-- Jornalistas investigativos 
+- Jornalistas investigativos
+
+O projeto foi traduzido para o inglês para que pessoas de outros países além do Brasil também possam utilizar a aplicação.
 
 A comunicação entre essas pessoas deve ser mantida em segredo para que a segurança de todos os envolvidos seja garantida. Instituições estatais que tenham informações internas vazadas podem ter meios diversos para abafar e perseguir quem vaza e quem recebe o material comprometedor.
 
 A *Operation Blizzard* foi desenvolvida para que essa comunicação entre as partes pudesse se dar de forma mais segura. Ainda que um terceiro veja uma mensagem criptografada, sem o **token** (ou **senha**) especial, a mensagem será somente um monte de letras embaralhadas.
 
-O projeto foi traduzido para o inglês para que pessoas de outros países além do Brasil também possam utilizar a aplicação.
+### 👉 Caracteres aceitos
+É aceita a entrada dos seguintes tipos de caracteres na aplicação:
+
+- Letras maiúsculas com e sem acento
+- Letras minúsculas com e sem acento
+- Números
+- Espaços
+- Caracteres especiais (como ?, !, @, etc.)
+
+No caso da **senha**, são aceitos *apenas números*, que podem possuir valores *positivos* ou *negativos*.
 
 ### 👉 Passo a passo
 ![alt text](src/img/blizzard-demo.gif)
 
-A mensagem é inserida no campo de __Input message__, o usuário coloca o número __Token__ e, ao apertar o botão __Encrypt__, a mensagem é criptografada. O resultado aparecerá em __Output message__.
+A mensagem é inserida no campo de **Input message**, o usuário coloca o número **Token** e, ao apertar o botão **Encrypt**, a mensagem é criptografada. O resultado aparecerá em **Output message**.
 
 Da mesma forma, caso uma mensagem já criptografada seja recebida, ela deve ser inserida como **Input message**, coloca-se o mesmo **Token** e ao clicar em **Decrypt**, a mensagem é descriptografada e o resultado se tornará visível no campo **Output message**.
 
+Para copiar a mensagem traduzida, o usuário deve clicar em **Copy**, e para resetar os campos de **Input message** e **Token**, é só clicar em **Clear**.
+
 <br>
 
-## 🧰 Setup
-Para rodar esse projeto no seu computador, você vai precisar das ferramentas abaixo. Clique nos links para baixá-las direto das páginas oficiais:
+## 💻 Tecnologias
+Estas foram as linguagens utilizadas para construir esta aplicação:
 
-- [Node.js](https://nodejs.org/en/)
-- [npm](https://www.npmjs.com/get-npm)
-- [Git](https://git-scm.com/)
-
-Abra seu terminal e digite:
-
-```
-git clone https://github.com/akemimeka/SAP005-cipher
-```
-
-E para fazer o projeto rodar:
-```
-npm start
-```
+- HTML5
+- CSS3
+- JavaScript
